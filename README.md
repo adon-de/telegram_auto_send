@@ -17,11 +17,11 @@ TG API合规：使用者必须严格遵守Telegram API使用条款，禁止用�
 2.创建容器
 3. 配置容器变量
 
-API_ID=1234567
-API_HASH=your_api_hash_here
-PHONE_NUMBER=+8613800000000
-HTTP_PORT=8080
-TZ=Asia/Shanghai
+- API_ID=1234567
+- API_HASH=your_api_hash_here
+- PHONE_NUMBER=+8613800000000
+- HTTP_PORT=8080
+- TZ=Asia/Shanghai
 
 Volumes (持久化)
 **重要**：必须持久化 `/app/sessions`，否则重启后需要重新登录。
@@ -46,5 +46,5 @@ Volumes (持久化)
 本项目的 `ql_send_msg.py` 专为青龙面板设计，支持批量发送消息。
 必填项：TG 服务地址
 - **名称**: `TG_SERVICE_URL`
-- **值**: `http://tg-listener:8080/api/call` (如果青龙和 TG 服务在同一 Docker 网络)
+- **值**: `http://tg-service:8080/api/call` (如果青龙和 TG 服务在同一 Docker 网络)
   - 如果不在同一网络，请填写 TG 服务的局域网 IP:端口。
